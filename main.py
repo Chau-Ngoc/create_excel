@@ -1,13 +1,15 @@
 from openpyxl import Workbook
 
 from constants import BASE_DIR
-from utils import extract_file_content, input_content_to_dict
+from utils import extract_json_content
 
-input_file = BASE_DIR / "sample" / "input.txt"
-
-file_content = extract_file_content(input_file)
-content_dict = input_content_to_dict(file_content)
+input_file = BASE_DIR / "sample" / "input.json"
+json_content = extract_json_content(input_file)
 
 workbook = Workbook()
 sheet1 = workbook.create_sheet("Sheet 1", -1)
+
+for key in json_content:
+    sheet1.append(json_content[key])
+
 workbook.save("example.xlsx")

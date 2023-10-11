@@ -1,10 +1,6 @@
 {
-  "filename": "hello.xlsx",
-  "Hello": {
-    "A1": "Welcome to the world",
-    "A2": "Babe"
-  },
-  "World": {
-    "B5": "Welcome again"
-  }
+  "1": ["First name", "Last name", "Gender"],
+  "2": ["Kim", "Mi", "Female"],
+  "3": ["Kang", "Mi", "Female"],
+  "4": ["Jim", "Mi", "Male"]
 }
