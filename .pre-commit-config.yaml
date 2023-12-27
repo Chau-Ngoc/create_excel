@@ -6,6 +6,7 @@ repos:
       - id: end-of-file-fixer
       - id: check-yaml
       - id: check-added-large-files
+      - id: check-toml
   - repo: https://github.com/psf/black
     rev: 23.7.0
     hooks:
@@ -35,3 +36,7 @@ repos:
           - --line-length
           - "80"
         verbose: true
+  - repo: https://github.com/pappasam/toml-sort
+    rev: v0.23.1
+    hooks:
+      - id: toml-sort-fix
