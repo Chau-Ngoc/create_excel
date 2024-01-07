@@ -1,4 +1,4 @@
-from utils import extract_json_content
+from create_excel import extract_json_content
 
 
 def test_extract_json_content(resource_dir):

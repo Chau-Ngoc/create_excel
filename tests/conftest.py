@@ -1,8 +1,8 @@
-from pytest import fixture
+from pathlib import Path
 
-from constants import BASE_DIR
+from pytest import fixture
 
 
 @fixture
 def resource_dir():
-    return BASE_DIR / "tests" / "resources"
+    return Path.cwd() / "tests" / "resources"
