@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "create-excel"
+version = "1.0.0"
+authors = [{name = "Le Chau", email = "playerzawesome@gmail.com"}]
+requires-python = ">= 3.10"
+dependencies = ["click==8.1.7", "openpyxl==3.1.2", "pillow"]
+
+[project.scripts]
+create-excel = "create_excel.main:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["create_excel"]
+namespaces = false
